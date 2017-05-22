@@ -17,7 +17,7 @@
 @interface JotViewController () <UIGestureRecognizerDelegate, JotTextEditViewDelegate, JotDrawingContainerDelegate>
 
 @property (nonatomic, strong) UITapGestureRecognizer *tapRecognizer;
-@property (nonatomic, strong) UIPinchGestureRecognizer *pinchRecognizer;
+@property (nonatomic, strong, readwrite) UIPinchGestureRecognizer *pinchRecognizer;
 @property (nonatomic, strong) UIRotationGestureRecognizer *rotationRecognizer;
 @property (nonatomic, strong) UIPanGestureRecognizer *panRecognizer;
 @property (nonatomic, strong, readwrite) JotDrawingContainer *drawingContainer;
@@ -331,7 +331,7 @@
 
 - (void)handlePinchGesture:(UIGestureRecognizer *)recognizer
 {
-    
+
 }
 
 #pragma mark - JotDrawingContainer Delegate
