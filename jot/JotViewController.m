@@ -17,7 +17,7 @@
 @interface JotViewController () <UIGestureRecognizerDelegate, JotTextEditViewDelegate, JotDrawingContainerDelegate>
 
 @property (nonatomic, strong) UITapGestureRecognizer *tapRecognizer;
-@property (nonatomic, strong, readwrite) UIPinchGestureRecognizer *pinchRecognizer;
+// @property (nonatomic, strong, readwrite) UIPinchGestureRecognizer *pinchRecognizer;
 @property (nonatomic, strong) UIRotationGestureRecognizer *rotationRecognizer;
 @property (nonatomic, strong) UIPanGestureRecognizer *panRecognizer;
 @property (nonatomic, strong, readwrite) JotDrawingContainer *drawingContainer;
@@ -55,8 +55,8 @@
         _initialTextInsets = self.textView.initialTextInsets;
         _state = JotViewStateDefault;
         
-        _pinchRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinchGesture:)];
-        self.pinchRecognizer.delegate = self;
+        // _pinchRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinchGesture:)];
+        // self.pinchRecognizer.delegate = self;
         
         _rotationRecognizer = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinchOrRotateGesture:)];
         self.rotationRecognizer.delegate = self;
