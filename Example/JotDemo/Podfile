@@ -5,7 +5,7 @@ project 'JotDemo'
 platform :ios, '8.0'
 
 target 'JotDemo' do
-  pod "jot", :path => "../jot.podspec"
+  pod "jjot", :path => "../jjot.podspec"
 end
 
 target 'JotDemoTests' do

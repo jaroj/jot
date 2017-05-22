@@ -55,7 +55,7 @@
         _initialTextInsets = self.textView.initialTextInsets;
         _state = JotViewStateDefault;
         
-        _pinchRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinchOrRotateGesture:)];
+        _pinchRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinchGesture:)];
         self.pinchRecognizer.delegate = self;
         
         _rotationRecognizer = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinchOrRotateGesture:)];
@@ -327,6 +327,11 @@
 - (void)handlePinchOrRotateGesture:(UIGestureRecognizer *)recognizer
 {
     [self.textView handlePinchOrRotateGesture:recognizer];
+}
+
+- (void)handlePinchGesture:(UIGestureRecognizer *)recognizer
+{
+    
 }
 
 #pragma mark - JotDrawingContainer Delegate
