@@ -107,7 +107,7 @@
     [self.drawingContainer addGestureRecognizer:self.tapRecognizer];
     [self.drawingContainer addGestureRecognizer:self.panRecognizer];
     [self.drawingContainer addGestureRecognizer:self.rotationRecognizer];
-    [self.drawingContainer addGestureRecognizer:self.pinchRecognizer];
+    // [self.drawingContainer addGestureRecognizer:self.pinchRecognizer];
 }
 
 #pragma mark - Properties
@@ -128,7 +128,7 @@
         self.drawingContainer.multipleTouchEnabled =
         self.tapRecognizer.enabled =
         self.panRecognizer.enabled =
-        self.pinchRecognizer.enabled =
+        // self.pinchRecognizer.enabled =
         self.rotationRecognizer.enabled = (state == JotViewStateText);
     }
 }
