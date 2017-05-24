@@ -215,6 +215,11 @@ typedef NS_ENUM(NSUInteger, JotViewState){
  */
 - (UIImage *)renderImageWithScale:(CGFloat)scale onColor:(UIColor *)color;
 
+/**
+ *  Expose gesture handler event so it can be accessed from other class to channel touches
+*/
+- (void)handlePanGesture:(UIGestureRecognizer *)recognizer;
+
 @end
 
 @protocol JotViewControllerDelegate <NSObject>
